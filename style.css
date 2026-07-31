@@ -1349,8 +1349,10 @@ body.theme-dark .main-km9-logo {
 
   .web-project-item {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
+    gap: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
   }
 
   .page-main-title {
