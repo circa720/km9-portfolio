@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 5 640 400">
+  <title>KMA</title>
+
+  <!-- K -->
+  <g>
+    <path d="M 95 90 L 95 340" stroke="#000" stroke-width="80" stroke-linecap="round" fill="none"/>
+    <path d="M 230 75 L 108 200 L 230 340" stroke="#000" stroke-width="80" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 95 90 L 95 340" stroke="#fff" stroke-width="58" stroke-linecap="round" fill="none"/>
+    <path d="M 230 75 L 108 200 L 230 340" stroke="#fff" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- M -->
+  <g>
+    <path d="M 250 342 L 250 85 L 340 218 L 430 85 L 430 342" stroke="#000" stroke-width="80" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 250 342 L 250 85 L 340 218 L 430 85 L 430 342" stroke="#fff" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- A -->
+  <g>
+    <path d="M 460 345 L 500 125 Q 510 65 540 63 Q 570 65 580 125 L 620 345" stroke="#000" stroke-width="80" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 460 345 L 500 125 Q 510 65 540 63 Q 570 65 580 125 L 620 345" stroke="#fff" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="478" y1="245" x2="600" y2="245" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

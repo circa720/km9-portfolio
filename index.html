@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KM9 STUDIO — Art, Design & Web</title>
+  <meta name="description" content="KM9 Studio — Multidisciplinary practice in Art, Design, and Web development.">
+
+  <!-- Google Fonts: Jua & Mulish -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-light view-home" id="bodyElement">
+
+  <!-- Subtle Ambient Background Effects -->
+  <div class="ambient-bg" id="ambientBg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="subtle-grid-pattern"></div>
+  </div>
+
+  <!-- Persistent Top Header (Visible across pages) -->
+  <header class="app-header" id="appHeader">
+    <div class="header-inner">
+      <!-- Logo Button (Navigates to Home) -->
+      <button class="header-logo-btn" id="headerLogoBtn" aria-label="Return to Home">
+        <div class="mini-logo-wrapper float-hover">
+          <img src="assets/km9-logo.png" alt="KM9 Logo" class="mini-logo-img">
+        </div>
+      </button>
+
+      <!-- Hamburger Menu Toggle Button -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+        <span class="ham-line line-1"></span>
+        <span class="ham-line line-2"></span>
+        <span class="ham-line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide-over Navigation Drawer -->
+  <aside class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-logo">
+          <img src="assets/km9-logo.png" alt="KM9" class="drawer-logo-img">
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Menu">&times;</button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a href="#home" class="drawer-link active" data-view="home">
+          <span class="link-num">00</span>
+          <span class="link-label">HOME</span>
+        </a>
+        <a href="#art" class="drawer-link" data-view="art">
+          <span class="link-num">01</span>
+          <span class="link-label">ART</span>
+        </a>
+        <a href="#design" class="drawer-link" data-view="design">
+          <span class="link-num">02</span>
+          <span class="link-label">DESIGN</span>
+        </a>
+        <a href="#web" class="drawer-link" data-view="web">
+          <span class="link-num">03</span>
+          <span class="link-label">WEB</span>
+        </a>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="theme-toggle-row">
+          <span class="theme-label">THEME</span>
+          <div class="theme-pills">
+            <button class="theme-pill active" data-theme="light">LIGHT</button>
+            <button class="theme-pill" data-theme="dark">DARK</button>
+          </div>
+        </div>
+        <p class="drawer-copy">&copy; 2026 KM9 STUDIO • All Rights Reserved</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main View Container (Single Page Application Views) -->
+  <main class="main-stage">
+
+    <!-- ==================== VIEW 1: HOME ==================== -->
+    <section class="page-view view-section-home active" id="viewHome">
+      <div class="home-hero-container">
+        <!-- Floating Logo Stage -->
+        <div class="logo-floating-stage" id="homeLogoStage">
+          <div class="logo-3d-wrapper float-animation" id="homeLogoWrapper">
+            <div class="logo-shadow"></div>
+            <img src="assets/km9-logo.png" alt="KM9 Studio Bubble Logo" class="main-km9-logo" id="homeKm9Logo">
+          </div>
+        </div>
+
+        <!-- Pill Category Navigation (ART • DESIGN • WEB) -->
+        <nav class="home-pill-nav" aria-label="Main Navigation">
+          <button class="nav-pill-btn active" data-target="art" id="btnPillArt">
+            <span>ART</span>
+          </button>
+          <button class="nav-pill-btn" data-target="design" id="btnPillDesign">
+            <span>DESIGN</span>
+          </button>
+          <button class="nav-pill-btn" data-target="web" id="btnPillWeb">
+            <span>WEB</span>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+
+    <!-- ==================== VIEW 2: ART ==================== -->
+    <section class="page-view view-section-art" id="viewArt">
+      <div class="view-content-container">
+        <!-- Page Header & Medium Filter Pills (Centered!) -->
+        <div class="art-page-top-bar centered-page-header">
+          <h1 class="page-main-title title-jua align-center">ART</h1>
+          <p class="section-lead-text align-center">Side projects, acrylic painting explorations, digital artwork & photography experiments.</p>
+
+          <!-- Medium Filter Tabs (Centered) -->
+          <div class="medium-filter-bar center-pills">
+            <button class="filter-pill active" data-filter="all">ALL</button>
+            <button class="filter-pill" data-filter="acrylic">ACRYLIC PAINTING</button>
+            <button class="filter-pill" data-filter="digital">DIGITAL ART</button>
+            <button class="filter-pill" data-filter="photo">PHOTOGRAPHY</button>
+          </div>
+        </div>
+
+        <div class="art-split-layout">
+          <!-- Left Column: Featured Acrylic Painting + Project Cards -->
+          <div class="art-left-column">
+            <!-- Acrylic Impasto Featured Card -->
+            <div class="art-featured-card card-interactive art-card-item" data-category="acrylic" data-project="acrylic-impasto">
+              <div class="card-image-wrap">
+                <img src="assets/art-impasto.jpg" alt="Acrylic Impasto Painting on Raw Linen" class="featured-img">
+                <div class="image-overlay-badge">STUDY // 01 • ACRYLIC ON LINEN</div>
+              </div>
+              <div class="art-card-details">
+                <h3 class="art-card-name">FLUORESCENT IMPASTO NO. 04</h3>
+                <p class="art-card-sub">Layered palette knife acrylic strokes, gold leaf glaze & cyan pigments on unprimed raw linen.</p>
+              </div>
+            </div>
+
+            <!-- Outlined Detail Cards -->
+            <div class="art-skeleton-cards">
+              <div class="outline-card card-interactive art-card-item" data-category="digital" data-project="spatial-forms">
+                <div class="outline-card-inner">
+                  <div class="outline-card-header">
+                    <span class="card-tag">DIGITAL // 02</span>
+                    <span class="card-arrow">&rarr;</span>
+                  </div>
+                  <h4 class="outline-card-title">CHROMATIC PRISMS & LIGHT</h4>
+                  <p class="outline-card-desc">3D digital generative art exploring frosted glass refraction and spectral color spill.</p>
+                </div>
+              </div>
+
+              <div class="outline-card card-interactive art-card-item" data-category="photo" data-project="sunset-lake">
+                <div class="outline-card-inner">
+                  <div class="outline-card-header">
+                    <span class="card-tag">PHOTOGRAPHY // 03</span>
+                    <span class="card-arrow">&rarr;</span>
+                  </div>
+                  <h4 class="outline-card-title">TRANQUIL HORIZON REFLECTION</h4>
+                  <p class="outline-card-desc">Long-exposure photography capturing violet gradients and calm lake symmetry at twilight.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Typography Block & Experiment Notes -->
+          <div class="art-right-column">
+            <div class="sculpture-highlight-card card-interactive art-card-item" data-category="digital" data-project="spatial-forms">
+              <div class="card-image-wrap aspect-square">
+                <img src="assets/art-sculpture.jpg" alt="Digital Glass Sculpture" class="featured-img">
+                <div class="image-overlay-badge">STUDY // 02 • DIGITAL ART</div>
+              </div>
+            </div>
+
+            <div class="editorial-body">
+              <h2 class="editorial-subtitle">STUDIO PRACTICE & TACTILE EXPERIMENTS</h2>
+              <p>
+                A creative sandbox for tactile side projects outside of client work. Here I explore physical mediums like heavy impasto acrylics, cast plaster forms, and glass refraction.
+              </p>
+              <p>
+                Every study is a hands-on exploration of color fields, texture building, and light projection.
+              </p>
+
+              <div class="art-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">CREATIVE FOCUS</span>
+                  <span class="spec-val">Side Projects & Tactile Art</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">PRIMARY MEDIUM</span>
+                  <span class="spec-val">Acrylic, Glass & Pastels</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">YEAR</span>
+                  <span class="spec-val">2026 Sandbox</span>
+                </div>
+              </div>
+
+              <div class="editorial-actions">
+                <button class="primary-btn view-gallery-btn" id="btnExploreArtGallery">VIEW FULL EXPERIMENT DETAILS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Log / Process Timeline Section (Centered!) -->
+        <section class="studio-log-section">
+          <div class="log-section-header centered-log-header">
+            <h3 class="log-section-title title-jua align-center">STUDIO EXPERIMENT LOG</h3>
+            <span class="log-subtitle align-center">// RECENT NOTES & MATERIAL STUDIES</span>
+          </div>
+
+          <div class="log-entries-grid">
+            <div class="log-entry-card">
+              <span class="log-date">LOG #04 • 2026</span>
+              <h4 class="log-title">Acrylic Impasto over Plaster</h4>
+              <p class="log-text">Testing heavy body acrylic glazes applied with steel trowels over carved plaster substrate.</p>
+            </div>
+            <div class="log-entry-card">
+              <span class="log-date">LOG #03 • 2026</span>
+              <h4 class="log-title">Frosted Glass Refraction</h4>
+              <p class="log-text">Setting up directional studio lights against iridescent acrylic glass blocks to capture spectral color spill.</p>
+            </div>
+            <div class="log-entry-card">
+              <span class="log-date">LOG #02 • 2026</span>
+              <h4 class="log-title">Oil Pastel Color Fields</h4>
+              <p class="log-text">Blending raw earth pigments on heavy cotton rag paper to explore high-contrast monochromatic gradients.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- ==================== VIEW 3: DESIGN & BRAND ARCHITECTURE ==================== -->
+    <section class="page-view view-section-design" id="viewDesign">
+      <div class="view-content-container">
+        <!-- Page Header & Category Filter Bar -->
+        <div class="centered-page-header">
+          <h1 class="page-main-title title-jua align-center">DESIGN & SYSTEM</h1>
+          <p class="section-lead-text">Brand Architecture, Visual Identity Systems & Modern Kinetic Typography.</p>
+
+          <!-- Design Filter Pills -->
+          <div class="medium-filter-bar center-pills">
+            <button class="design-filter-pill active" data-design-filter="all">ALL DESIGN</button>
+            <button class="design-filter-pill" data-design-filter="brand">BRAND IDENTITY</button>
+            <button class="design-filter-pill" data-design-filter="type">TYPOGRAPHY</button>
+            <button class="design-filter-pill" data-design-filter="ui">INTERFACE & UI</button>
+          </div>
+        </div>
+
+        <!-- 3-Column Card Grid -->
+        <div class="design-three-column-grid">
+          <!-- Card 1: Studio Aeterna Brand Identity -->
+          <div class="design-card card-interactive design-card-item" data-design-category="brand" data-project="brand-system-1">
+            <div class="design-card-media">
+              <img src="assets/design-brand.jpg" alt="Studio Aeterna Brand System" class="design-card-img">
+              <span class="card-overlay-badge">BRAND IDENTITY</span>
+            </div>
+            <div class="design-card-content">
+              <span class="design-card-meta">STUDIO AETERNA • 2026</span>
+              <h3 class="design-card-title">AETERNA BRAND SYSTEM</h3>
+              <p class="design-card-text">
+                Complete brand architecture, stationery guidelines, geometric logo system, and custom grid layout specs.
+              </p>
+              <div class="card-tags-row">
+                <span class="mini-tag">GUIDELINES</span>
+                <span class="mini-tag">STATIONERY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Swiss Typography Specimen -->
+          <div class="design-card card-interactive design-card-item" data-design-category="type" data-project="brand-system-2">
+            <div class="design-card-media">
+              <img src="assets/design-type.jpg" alt="Swiss Typography Specimen" class="design-card-img">
+              <span class="card-overlay-badge">TYPOGRAPHY</span>
+            </div>
+            <div class="design-card-content">
+              <span class="design-card-meta">TYPE LAB • 2026</span>
+              <h3 class="design-card-title">SWISS TYPE SPECIMEN</h3>
+              <p class="design-card-text">
+                International typographic style poster series exploring heavy geometric sans-serif font hierarchy and red grid lines.
+              </p>
+              <div class="card-tags-row">
+                <span class="mini-tag">POSTER</span>
+                <span class="mini-tag">SWISS STYLE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Minimalist Studio UI -->
+          <div class="design-card card-interactive design-card-item" data-design-category="ui" data-project="brand-system-3">
+            <div class="design-card-media">
+              <img src="assets/art-hero-sunset.jpg" alt="Minimalist Studio UI" class="design-card-img">
+              <span class="card-overlay-badge">INTERFACE & UI</span>
+            </div>
+            <div class="design-card-content">
+              <span class="design-card-meta">KM9 STUDIO • 2026</span>
+              <h3 class="design-card-title">MINIMALIST SPATIAL UI</h3>
+              <p class="design-card-text">
+                High-key gallery application design with clean lines, dark/light theme tokens, and glassmorphism.
+              </p>
+              <div class="card-tags-row">
+                <span class="mini-tag">WEB APP</span>
+                <span class="mini-tag">DESIGN SYSTEM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== VIEW 4: WEB & CREATIVE CODE ==================== -->
+    <section class="page-view view-section-web" id="viewWeb">
+      <div class="view-content-container">
+        <!-- Page Header & Filter Tabs -->
+        <div class="centered-page-header">
+          <h1 class="page-main-title title-jua align-center">WEB & CODE</h1>
+          <p class="section-lead-text">Interactive Digital Environments, Kinetic WebGL Interfaces & Creative Web Coding.</p>
+
+          <!-- Web Filter Pills -->
+          <div class="medium-filter-bar center-pills">
+            <button class="web-filter-pill active" data-web-filter="all">ALL WEB</button>
+            <button class="web-filter-pill" data-web-filter="webgl">WEBGL & THREE.JS</button>
+            <button class="web-filter-pill" data-web-filter="apps">STUDIO APPS</button>
+            <button class="web-filter-pill" data-web-filter="shaders">SHADERS</button>
+          </div>
+        </div>
+
+        <div class="web-projects-stack">
+          <!-- Web Project 1: WebGL Kinetic Typography -->
+          <div class="web-project-item card-interactive web-card-item" data-web-category="webgl" data-project="web-kinetic">
+            <div class="web-project-preview">
+              <div class="browser-mockup-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-url">km9.studio/kinetic-3d</span>
+              </div>
+              <div class="web-preview-body">
+                <img src="assets/web-kinetic.jpg" alt="Kinetic 3D Typography WebGL Preview" class="web-preview-img">
+              </div>
+            </div>
+            <div class="web-project-info">
+              <div class="web-tags-row">
+                <span class="web-badge">THREE.JS</span>
+                <span class="web-badge">WEBGL</span>
+                <span class="web-badge">KINETIC TYPE</span>
+              </div>
+              <h2 class="web-title">KINETIC 3D TYPOGRAPHY SYNTH</h2>
+              <p class="web-desc">An interactive WebGL audio-visual experiment combining floating physics, procedural audio synthesis, and custom variable font modulation.</p>
+              <button class="secondary-btn">LAUNCH DEMO &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Web Project 2: Studio Suite App -->
+          <div class="web-project-item card-interactive web-card-item" data-web-category="apps" data-project="web-dashboard">
+            <div class="web-project-preview">
+              <div class="browser-mockup-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-url">km9.studio/minimalist-app</span>
+              </div>
+              <div class="web-preview-body">
+                <img src="assets/design-brand.jpg" alt="Minimalist UI Dashboard Preview" class="web-preview-img">
+              </div>
+            </div>
+            <div class="web-project-info">
+              <div class="web-tags-row">
+                <span class="web-badge">VANILLA JS</span>
+                <span class="web-badge">MODERN CSS</span>
+                <span class="web-badge">SPA</span>
+              </div>
+              <h2 class="web-title">ULTRA-MINIMALIST STUDIO SUITE</h2>
+              <p class="web-desc">High performance single-page web platform designed with high-contrast typography, glassmorphism overlays, and smooth slide view transitions.</p>
+              <button class="secondary-btn">LAUNCH DEMO &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Web Project 3: Shader Lab -->
+          <div class="web-project-item card-interactive web-card-item" data-web-category="shaders" data-project="web-shader">
+            <div class="web-project-preview">
+              <div class="browser-mockup-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-url">km9.studio/shader-lab</span>
+              </div>
+              <div class="web-preview-body">
+                <img src="assets/design-type.jpg" alt="GLSL Shader Lab Preview" class="web-preview-img">
+              </div>
+            </div>
+            <div class="web-project-info">
+              <div class="web-tags-row">
+                <span class="web-badge">GLSL</span>
+                <span class="web-badge">FRAGMENT SHADERS</span>
+                <span class="web-badge">PROCEDURAL</span>
+              </div>
+              <h2 class="web-title">PROCEDURAL GLSL SHADER LAB</h2>
+              <p class="web-desc">Real-time GPU fragment shader experiments exploring liquid noise algorithms, spectral light dispersion, and raymarching Signed Distance Fields.</p>
+              <button class="secondary-btn">LAUNCH DEMO &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack & Code Philosophy Cards -->
+        <section class="web-tech-stack-section">
+          <div class="log-section-header centered-log-header">
+            <h3 class="log-section-title title-jua align-center">CREATIVE CODE ARCHITECTURE</h3>
+            <span class="log-subtitle align-center">// PERFORMANCE & ENGINEERING PHILOSOPHY</span>
+          </div>
+
+          <div class="log-entries-grid">
+            <div class="log-entry-card">
+              <span class="log-date">STACK // 01</span>
+              <h4 class="log-title">60FPS WebGL & GPU Shaders</h4>
+              <p class="log-text">Hardware-accelerated graphics using custom GLSL shaders and Three.js scene graphs for fluid motion.</p>
+            </div>
+            <div class="log-entry-card">
+              <span class="log-date">STACK // 02</span>
+              <h4 class="log-title">Zero-Dependency Vanilla CSS</h4>
+              <p class="log-text">Custom CSS design tokens, cubic-bezier transition curves, and CSS Variables for ultra-fast load times.</p>
+            </div>
+            <div class="log-entry-card">
+              <span class="log-date">STACK // 03</span>
+              <h4 class="log-title">Modular SPA Architecture</h4>
+              <p class="log-text">Lightweight single-page navigation physics with instant DOM state management and zero full-page reloads.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Detail Lightbox Modal -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <div class="modal-content-body" id="modalBody">
+        <!-- Content injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
